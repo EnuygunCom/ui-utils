@@ -735,7 +735,7 @@ angular.module('ui.mask', [])
           function blurHandler(){
             oldCaretPosition = 0;
             oldSelectionLength = 0;
-            if (!isValid || value.length === 0) {
+            if (/*!isValid || */value.length === 0) {
               valueMasked = '';
               iElement.val('');
               scope.$apply(function (){
